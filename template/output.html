@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,4 +77,84 @@
     </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="output.less" rel="stylesheet"></link>-->
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        
+    
+</head>
+<body>
+    <h1>OUTPUT</h1>
+    <center>
+    <table>
+        <tr>
+          <th>happy</th>
+          <th>sad</th>
+          <th>angry</th>
+          <th>disgust</th>
+          <th>surprised</th>
+          <th>neutral</th>
+          <th>fearful</th>
+
+          
+        </tr>
+        <tr>
+          <td>{{h}}</td>
+          <td>{{s}}</td>
+          <td>{{a}}</td>
+          <td>{{d}}</td>
+          <td>{{sur}}</td>
+          <td>{{n}}</td>
+          <td>{{f}}</td>
+          
+        </tr>
+      
+      </table>
+
+     
+    </center>
+    <br><br>
+    
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+        var xValues = ["Happy", "Sad", "Surprised", "Angry", "Neutral","Fearful"];
+        var yValues = [{{h}},{{s}},{{sur}},{{a}},{{n}},{{f}}];
+        var barColors = ["red", "green", "blue", "orange", "brown","cyan"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: "Emotion Distribution"
+                }
+            }
+        });
+    </script>
+
+</body>
+>>>>>>> f12e914e31ea2cc939af962b1098354948f72625
 </html>
