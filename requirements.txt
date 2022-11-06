@@ -1,0 +1,4 @@
+keras==2.9.0
+flask==1.1.2
+cv2==4.6.0 
+opencv-python==4.5.1.48
